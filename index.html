@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Red Pill or Blue Pill</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      /* Style the container for the pills */
+      .pill-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      * {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+      }
+      /* Style the pills */
+      .pill {
+        display: inline-block;
+        border-radius: 50px;
+        padding: 1rem 3rem;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background-color: #4caf50;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+          0px 4px 8px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
+        margin: 1rem;
+
+        /* From https://css.glass */
+      }
+
+      .pill:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 40px;
+        z-index: -1;
+        filter: blur(20px);
+      }
+
+      .pill:after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        z-index: -2;
+      }
+
+      .pill:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+          0px 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Style the red pill */
+      .red {
+        background-color: red;
+      }
+
+      /* Style the blue pill */
+      .blue {
+        background-color: blue;
+      }
+
+      /* Style the pill text */
+      .pill-text {
+        color:black;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Red Pill or Blue Pill?</h1>
+    <div class="pill-container">
+      <div class="pill red" onclick="redirectTo('https://ncerplus2.notion.site/Under-Development-02926680729a491da6a0ca65d6a4ca08')">
+        <div class="pill-text"></div>
+      </div>
+      <div
+        class="pill blue"
+        onclick="redirectTo('https://ncerplus.notion.site/NCER-9356cddb42da4654812bbbed683edf8f')"
+      >
+        <div class="pill-text"></div>
+      </div>
+    </div>
+
+    <script>
+      function redirectTo(url) {
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>
